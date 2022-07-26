@@ -50,7 +50,7 @@ function Login() {
               <a
                 style={{ color: "blue", cursor: "pointer" }}
                 onClick={() => {
-                  navigate("/register");
+                  navigate("/signup");
                 }}
               >
                 SignUp
