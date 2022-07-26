@@ -32,15 +32,3 @@ const plansSchema = new mongoose.Schema({
 });
 
 export default mongoose.model("plans", plansSchema);
-
-// [
-//   {
-//     planName: "Basic",
-//     monthlyPrice: "10",
-//     yearlyPrice: "100",
-//     VideoQuality: "HD",
-//     Resolution: "HD",
-//     Device: "Smartphone",
-//     NumberOfScreens: "1",
-//   },
-// ];

@@ -1,8 +1,10 @@
 import express from "express";
-const router = express.Router();
 import bcrypt from "bcrypt";
+
 import UserManagement from "../../schema/userSchema";
 import userInterface from "../../interfaces/userInterface";
+
+const router = express.Router();
 
 router.post("/", async (req: any, res: any) => {
   try {

@@ -10,6 +10,8 @@ import { getRouter as planGetRouter } from "./src/routes/planRoutes/get";
 import { PostRouter as userPostSignUp } from "./src/routes/userRoutes/postSignUp";
 import { postLoginRouter } from "./src/routes/userRoutes/postLogin";
 
+import {SubscriptionPostRouter} from "./src/routes/subscriptionRoutes/post";
+
 const port = process.env.PORT || 5000;
 const app = express();
 
@@ -23,6 +25,7 @@ app.use("/plans/post", planPostRouter);
 app.use("/plans/get", planGetRouter);
 app.use("/user/signup", userPostSignUp);
 app.use("/user/login", postLoginRouter);
+app.use("/subscription/post", SubscriptionPostRouter);
 
 const DB_CONNECT: string = process.env.DB_CONNECT!;
 
