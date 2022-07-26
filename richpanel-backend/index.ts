@@ -12,6 +12,7 @@ import { postLoginRouter } from "./src/routes/userRoutes/postLogin";
 
 import {SubscriptionPostRouter} from "./src/routes/subscriptionRoutes/post";
 import {getSubscriptionRouter} from "./src/routes/subscriptionRoutes/get";
+import {deleteSubscriptionRouter} from "./src/routes/subscriptionRoutes/delete";
 
 const port = process.env.PORT || 5000;
 const app = express();
@@ -28,6 +29,7 @@ app.use("/user/signup", userPostSignUp);
 app.use("/user/login", postLoginRouter);
 app.use("/subscription/post", SubscriptionPostRouter);
 app.use("/subscription/get", getSubscriptionRouter);
+app.use("/subscription/delete", deleteSubscriptionRouter);
 
 const DB_CONNECT: string = process.env.DB_CONNECT!;
 
