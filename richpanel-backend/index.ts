@@ -4,7 +4,8 @@ import env from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-import { PostRouter } from "./src/routes/planRoutes/post";
+import { PostRouter as planPostRouter } from "./src/routes/planRoutes/post";
+import { getRouter as planGetRouter } from "./src/routes/planRoutes/get";
 
 const port = process.env.PORT || 5000;
 const app = express();
@@ -15,7 +16,8 @@ app.use(bodyParser.json());
 
 app.listen(port);
 
-app.use("/plans/post", PostRouter);
+app.use("/plans/post", planPostRouter);
+app.use("/plans/get", planGetRouter);
 
 const DB_CONNECT: string = process.env.DB_CONNECT!;
 
