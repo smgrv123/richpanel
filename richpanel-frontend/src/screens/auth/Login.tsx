@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/auth/Button";
 import TextInput from "../../components/auth/TextInput";
 import "../../styles/authStyles.css";
+import { loginUser } from "../../utils/apiHandling/authAPI";
+import { login } from "../../utils/interface/authInterface";
 
 function Login() {
   const [email, setemail] = useState<string>("");
@@ -42,7 +44,11 @@ function Login() {
             <Button
               placeholder="Login"
               LoginFunction={() => {
-                console.log("lgi");
+                const logindata: login = {
+                  Email: email,
+                  Password: pass,
+                }
+                loginUser(logindata)
               }}
             />
             <p>

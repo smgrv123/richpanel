@@ -44,12 +44,17 @@
     padding-bottom: 10px;
 }
 
+.auth-input:focus{
+    outline: none;
+}
+
 .auth-button{
     background-color: #17386a;
     border-radius: 5px;
     padding:10px;
     color: #fff;
     margin-top: 25px;
+    cursor: pointer;
 }
 
 .auth-input-container{

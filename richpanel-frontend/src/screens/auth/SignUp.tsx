@@ -1,18 +1,19 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/auth/Button";
 import TextInput from "../../components/auth/TextInput";
 import "../../styles/authStyles.css";
+import { signup } from "../../utils/interface/authInterface";
+import { signUpUser } from "../../utils/apiHandling/authAPI";
 
 function SignUp() {
+  const [name, setname] = useState<string>("");
+  const [email, setemail] = useState<string>("");
+  const [pass, setpass] = useState<string>("");
 
-    const [name, setname] = useState<string>('');
-    const [email, setemail] = useState<string>("");
-    const [pass, setpass] = useState<string>("");
-
-    let navigate = useNavigate();
+  let navigate = useNavigate();
 
   return (
     <div className="auth-parent">
@@ -55,7 +56,12 @@ function SignUp() {
             <Button
               placeholder="Login"
               LoginFunction={() => {
-                console.log("lgi");
+                const signupdata: signup = {
+                  Name: name,
+                  Email: email,
+                  Password: pass,
+                }
+                signUpUser(signupdata)
               }}
             />
             <p>
@@ -73,7 +79,8 @@ function SignUp() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default SignUp
+export default SignUp;
+
