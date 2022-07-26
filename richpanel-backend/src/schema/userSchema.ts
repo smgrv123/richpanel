@@ -8,6 +8,7 @@ const UserManagementSchema = new mongoose.Schema({
   Email: {
     type: String,
     required: true,
+    unique: true,
   },
   Password: {
     type: String,

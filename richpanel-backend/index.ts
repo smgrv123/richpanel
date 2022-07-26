@@ -7,6 +7,8 @@ import cors from "cors";
 import { PostRouter as planPostRouter } from "./src/routes/planRoutes/post";
 import { getRouter as planGetRouter } from "./src/routes/planRoutes/get";
 
+import { PostRouter as userPostRouter } from "./src/routes/userRoutes/post";
+
 const port = process.env.PORT || 5000;
 const app = express();
 
@@ -18,6 +20,7 @@ app.listen(port);
 
 app.use("/plans/post", planPostRouter);
 app.use("/plans/get", planGetRouter);
+app.use("/user/post", userPostRouter);
 
 const DB_CONNECT: string = process.env.DB_CONNECT!;
 
