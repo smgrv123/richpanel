@@ -1,6 +1,12 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 
 import Button from "../../components/auth/Button";
 import TextInput from "../../components/auth/TextInput";
@@ -11,7 +17,19 @@ import { login } from "../../utils/interface/authInterface";
 function Login() {
   const [email, setemail] = useState<string>("");
   const [pass, setpass] = useState<string>("");
+
   let navigate = useNavigate();
+
+  // const renderAlert = () => {
+  //   console.log('first')
+  //   return (
+  //     <Alert status="error">
+  //       <AlertIcon />
+  //       <AlertTitle>Login Denied</AlertTitle>
+  //       <AlertDescription>Incorrect Username and Password</AlertDescription>
+  //     </Alert>
+  //   );
+  // };
 
   return (
     <div className="auth-parent">
@@ -48,7 +66,8 @@ function Login() {
                   Email: email,
                   Password: pass,
                 }
-                loginUser(logindata)
+                loginUser(logindata, navigate);
+                
               }}
             />
             <p>

@@ -60,8 +60,8 @@ function SignUp() {
                   Name: name,
                   Email: email,
                   Password: pass,
-                }
-                signUpUser(signupdata)
+                };
+                signUpUser(signupdata,navigate);
               }}
             />
             <p>
@@ -83,4 +83,3 @@ function SignUp() {
 }
 
 export default SignUp;
-

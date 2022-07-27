@@ -1,9 +1,11 @@
-import React from 'react'
+import { Navigate, Outlet } from "react-router-dom";
+import Login from "../screens/auth/Login";
+import mobxStore from "../store/mobxStore";
 
 function ProtectedRoutes() {
-  return (
-    <div>ProtectedRoutes</div>
-  )
+  let isAuth = mobxStore.userSuccesssfullyLoggedIn;
+
+  return isAuth ? <Outlet /> : <Navigate to={'/login'} />;
 }
 
-export default ProtectedRoutes
+export default ProtectedRoutes;

@@ -1,0 +1,134 @@
+.data {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 60px;
+  margin-left: 15%;
+}
+
+.data-row-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 1%;
+  padding-left: 5%;
+}
+
+.duration > a {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: medium;
+  word-wrap: none;
+}
+
+.choice {
+  width: 40%;
+}
+
+.duration {
+  background-color: #1e4d90;
+  padding: 10px;
+  border-radius: 40px;
+  width: 200px;
+  height: 1cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selector {
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.selector > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: #1e4d90;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.next {
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 300px;
+  padding: 17px;
+  background-color: #1e4d90;
+  border-radius: 5px;
+  color: white;
+}
+
+.data-values {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: flex-start;
+}
+
+.data-values:first-child {
+  margin-left: 50px;
+}
+
+.data-values:not(:first-child) {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: -10px;
+}
+
+.data-column:first-child > div:first-child {
+  margin-bottom: 32px;
+}
+
+.data-column:not(:first-child) {
+  width: 25%;
+  margin-top: -40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-column > div:not(:first-child) {
+  margin-top: 10px;
+}
+
+.data-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.active {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1e4d90;
+}
+
+.not-active {
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+}
